@@ -1,0 +1,134 @@
+.footer {
+    padding-top: 117px;
+    padding-bottom: 120px;
+    margin-top: 150px;
+    background: rgb(253, 251, 248);
+    // .footer__container
+
+    &__container {}
+
+    // .footer__flex
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width:992px){
+              gap: 10px;
+        }
+        @media (max-width:768px){
+              display: grid;
+              grid-template-columns: repeat(2,1fr);
+              gap: 0;
+              grid-row-gap: 60px;
+              grid-column-gap: 40px;
+        }
+    }
+
+    // .footer__item
+
+    &__item {
+        @media (max-width:768px){
+            &:nth-child(1){
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }  
+        }
+        &--none{
+            @media (max-width:768px){
+                  display: none;
+            }
+        }
+    }
+
+    // .footer__logoLink
+
+    &__logoLink {}
+
+    // .footer__subtitel
+
+    &__subtitel {
+        color: rgb(0, 0, 0);
+        font-family: Lato;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: 1%;
+        text-transform: uppercase;
+        &--color{
+            opacity: 0.7;
+        }
+        @media (max-width:768px){
+            opacity: 0.7;
+        }
+    }
+
+    // .footer__list
+
+    &__list {
+        margin-top: 32px;
+    }
+
+    // .footer__li
+
+    &__li {
+        margin-bottom: 10px;
+        &:last-child{
+            margin-bottom: 0px;
+        }
+    }
+
+    // .footer__link
+
+    &__link {
+        color: rgba(0, 0, 0, 0.7);
+        font-family: Lato;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 1%;
+        text-transform: uppercase;
+        &--color{
+            opacity: 0.7;
+            text-transform: unset;
+        }
+        &--colorTwo{
+            opacity: 0.4;
+            text-transform: unset;
+        }
+    }
+
+    // .footer__link--color
+
+    &__link--color {}
+
+    // .footer__social
+
+    &__social {}
+
+    // .footer__titel-social
+
+    &__titel-social {
+        color: rgb(0, 0, 0);
+        font-family: Lato;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: 1%;
+        text-transform: uppercase;
+        opacity: 0.7;
+        margin-bottom: 15px;
+        margin-top: 50px;
+    }
+
+    // .footer__icon-block
+
+    &__icon-block {
+        display: flex;
+        gap: 16px;
+    }
+
+    // .footer__iconLink
+
+    &__iconLink {}
+}
+
